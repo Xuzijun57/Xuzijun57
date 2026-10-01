@@ -36,5 +36,5 @@ if total:
     readme = Path("README.md")
     text = readme.read_text(encoding="utf-8")
     import re
-    text = re.sub(r"<!-- aggregate:start -->.*?<!-- aggregate:end -->", f"<!-- aggregate:start -->\nTotal Contributions across all years: **{total}**. Anonymous private activity is included when enabled in GitHub profile settings.\n<!-- aggregate:end -->", text, flags=re.S)
+    text = re.sub(r"<!-- aggregate:start -->.*?<!-- aggregate:end -->", f"<!-- aggregate:start -->\nTotal Contributions across all years **{total}**. Anonymous private activity is included when enabled in GitHub profile settings.\n<!-- aggregate:end -->", text, flags=re.S)
     readme.write_text(text, encoding="utf-8")
