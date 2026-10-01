@@ -10,5 +10,5 @@ I am currently studying classical mechanics, electrodynamics, quantum mechanics,
 The five figures above show public activity. Total Commits covers 2026; Contributed to covers the past year.
 
 <!-- aggregate:start -->
-The aggregate contribution count is being refreshed. It includes anonymous private activity when enabled in GitHub profile settings.
+Total Contributions across all years **27**. Anonymous private activity is included when enabled in GitHub profile settings.
 <!-- aggregate:end -->
