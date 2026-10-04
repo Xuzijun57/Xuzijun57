@@ -1,6 +1,6 @@
 import os, urllib.request, xml.etree.ElementTree as ET, html
 from pathlib import Path
-URL = "https://github-stats-extended.vercel.app/api?username=Xuzijun57&show_icons=false&hide_rank=true&hide_title=true&commits_year=2026&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR&show=contributions"
+URL = "https://github-stats-extended.vercel.app/api?username=Xuzijun57&show_icons=false&hide_rank=true&hide_title=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR&show=contributions"
 request = urllib.request.Request(URL, headers={"User-Agent": "Xuzijun57-profile-card"})
 with urllib.request.urlopen(request, timeout=90) as response:
     root = ET.fromstring(response.read())
@@ -37,5 +37,5 @@ if total:
     readme = Path("README.md")
     text = readme.read_text(encoding="utf-8")
     import re
-    text = re.sub(r"<!-- aggregate:start -->.*?<!-- aggregate:end -->", f"<!-- aggregate:start -->\nTotal Contributions across all years **{total}**. Anonymous private activity is included when enabled in GitHub profile settings.\n<!-- aggregate:end -->", text, flags=re.S)
+    text = re.sub(r"<!-- aggregate:start -->.*?<!-- aggregate:end -->", f"<!-- aggregate:start -->\n<sub>Visible contributions across all years **{total}**, including commits and other contribution types. Private activity is included only when GitHub exposes anonymous private contributions.</sub>\n<!-- aggregate:end -->", text, flags=re.S)
     readme.write_text(text, encoding="utf-8")
