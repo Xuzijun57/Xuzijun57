@@ -6,7 +6,7 @@ I am currently studying classical mechanics, electrodynamics, quantum mechanics,
 
 <img src="./profile/stats.svg" width="450" alt="Public GitHub statistics" />
 
-<sub>Public activity only. Commits cover 2026; contributed repositories cover the past year. Private project activity is not included in the five figures.</sub>
+<sub>Public activity only. Commits cover all years; contributed repositories cover the past year. Private project activity is not included in the five figures.</sub>
 
 <!-- aggregate:start -->
 <sub>Visible contributions across all years **27**, including commits and other contribution types. Private activity is included only when GitHub exposes anonymous private contributions.</sub>
