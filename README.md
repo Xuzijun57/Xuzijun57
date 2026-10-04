@@ -1,14 +1,13 @@
-# Hi, I'm Xuzijun57
+# Xuzijun57
 
-I study in the Department of Physics at Fudan University. My interests include condensed matter physics and AI for physics.
+I study physics at Fudan University, with interests in condensed matter physics and AI for physics.
 
-I am currently studying classical mechanics, electrodynamics, quantum mechanics, and thermodynamics and statistical mechanics. I am also participating in a collaborative project on evaluating large language models for Physics Olympiad problems and developing data synthesis methods.
+I am currently studying classical mechanics, electrodynamics, quantum mechanics, and thermodynamics and statistical mechanics. My current collaborative project focuses on LLM evaluation for Physics Olympiad problems and data synthesis.
 
+<img src="./profile/stats.svg" width="450" alt="Public GitHub statistics" />
 
-<img src="./profile/stats.svg" width="670" alt="GitHub statistics" />
-
-The five figures above show public activity. Total Commits covers 2026; Contributed to covers the past year.
+<sub>Public activity only. Commits cover 2026; contributed repositories cover the past year. Private project activity is not included in the five figures.</sub>
 
 <!-- aggregate:start -->
-Total Contributions across all years **27**. Anonymous private activity is included when enabled in GitHub profile settings.
+<sub>Visible contributions across all years **27**, including commits and other contribution types. Private activity is included only when GitHub exposes anonymous private contributions.</sub>
 <!-- aggregate:end -->
