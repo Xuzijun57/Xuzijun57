@@ -22,7 +22,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/stats.svg README.md
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh profile statistics"
+            git commit -m "chore(stats): 更新主页统计卡片"
             git pull --rebase origin main
             git push
           fi
