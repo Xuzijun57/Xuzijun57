@@ -1,6 +1,6 @@
 import os, urllib.request, xml.etree.ElementTree as ET, html
 from pathlib import Path
-URL = "https://github-stats-extended.vercel.app/api?username=Xuzijun57&show_icons=false&hide_rank=true&hide_title=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR&show=contributions"
+URL = "https://github-stats-extended.vercel.app/api?username=Xuzijun57&show_icons=false&hide_rank=true&hide_title=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR&show=contributions&cache_seconds=21600"
 request = urllib.request.Request(URL, headers={"User-Agent": "Xuzijun57-profile-card"})
 with urllib.request.urlopen(request, timeout=90) as response:
     root = ET.fromstring(response.read())
@@ -12,7 +12,7 @@ def value(prefix):
             if candidate and candidate[0].isdigit():
                 return candidate
     raise ValueError("Missing statistic " + prefix)
-rows = [("Total Stars", value("Total Stars")), ("Total Commits", value("Total Commits")), ("Total PRs", value("Total PRs")), ("Total Issues", value("Total Issues")), ("Contributed to", value("Contributed to")), ("Contributions", value("Total Contributions"))]
+rows = [("Total Stars", value("Total Stars")), ("Public Commits", value("Total Commits")), ("Total PRs", value("Total PRs")), ("Total Issues", value("Total Issues")), ("Contributed to", value("Contributed to")), ("Contributions", value("Total Contributions"))]
 icons = [
 '<path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>',
 '<path d="M4 5v5h5M4 10a9 9 0 1 1-1 5M12 6v6l4 2"/>',
@@ -21,7 +21,7 @@ icons = [
 '<path d="M3 3h18v15H3zM7 18v4m10-4v4M3 14h18"/>',
 '<path d="M4 19V9m8 10V4m8 15v-7"/>'
 ]
-svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="670" height="341" viewBox="0 0 670 341" role="img" aria-label="Xuzijun57 public GitHub statistics"><rect x="1" y="1" width="668" height="339" rx="6" fill="#1e2329" stroke="#30363d" stroke-width="1.5"/><text x="36" y="53" fill="#539bf5" font-family="Georgia, Times New Roman, serif" font-size="46" font-weight="bold">Xuzijun57</text>']
+svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="670" height="341" viewBox="0 0 670 341" role="img" aria-label="Xuzijun57 GitHub statistics including visible anonymous private contributions"><rect x="1" y="1" width="668" height="339" rx="6" fill="#1e2329" stroke="#30363d" stroke-width="1.5"/><text x="36" y="53" fill="#539bf5" font-family="Georgia, Times New Roman, serif" font-size="46" font-weight="bold">Xuzijun57</text>']
 for i, ((label, count), icon) in enumerate(zip(rows, icons)):
     y = 96 + 41 * i
     svg.append(f'<g transform="translate(36 {y-12})" fill="none" stroke="#539bf5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{icon}</g>')
